@@ -33,7 +33,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .wrapper__content:nth-child(2) {
@@ -91,14 +91,8 @@ h1 {
     transform: scale(1.2);
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:350px) {
     section {
-        /* width: 100%;
-        max-width: 700px;
-        height: 100vh;
-        margin: 0 auto;
-        text-align: center;
-        position: relative; */
         padding: 0 2em;
     }
 
