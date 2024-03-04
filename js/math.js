@@ -11,7 +11,7 @@
 // function divide(num1, num2) {
 //   console.log(num1 / num2);
 // }
-//generates a random number between 1 and selected number
+//generates a random number between 0 and selected number
 const randNumberGenerator = (endNum) => {
   const randNum = Math.floor(Math.random() * endNum);
   return randNum;
