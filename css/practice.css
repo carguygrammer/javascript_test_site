@@ -10,7 +10,6 @@ body {
 }
 
 section {
-    /* border: 1px solid purple; */
     width: 100%;
     max-width: 700px;
     height: 100vh;
@@ -18,26 +17,30 @@ section {
     text-align: center;
     position: relative;
     padding: 0 1em;
+    margin: 0 auto;
+    transform: translate(0%, 0%);
+    display: flex;
+    justify-content: center;
 }
 
 .wrapper {
-    /* border: 1px solid teal; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .wrapper__content {
-    /* height: calc(100%/3); */
-    height: 200px;
-    /* height: calc(100vh /3); */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid red; */
+    padding: 1.5em;
+    height: calc(100vh/3);
+    overflow: hidden;
 }
 
 .wrapper__content:nth-child(2) {
     align-items: center;
+    height: 200px;
 }
 
 .wrapper__content:nth-child(3) {
@@ -63,16 +66,18 @@ h1 {
 
 .numberFont {
     font-size: 4rem;
+    font-size: clamp(3rem, 3vw, 4rem);
 }
 
 .btn {
-    margin: .5em;
-    padding: 1em;
+    margin: .4em;
+    padding: .7em;
     border: 1px solid white;
     background-color: transparent;
     color: white;
-    border-radius: 10px;
+    border-radius: 7px;
     transition: all .3s ease-in;
+    font-size: 1rem;
 }
 
 .btn:hover {
@@ -91,12 +96,89 @@ h1 {
     transform: scale(1.2);
 }
 
-@media screen and (max-width:350px) {
+@media screen and (orientation: landscape) {
+
+    html {
+        font-size: 80%;
+    }
+
+    section {
+        height: auto;
+    }
+
+    .wrapper {
+        height: 100vh;
+    }
+
+    .wrapper__content {
+        height: calc(100%/3);
+        height: auto;
+        transition: height 1s ease;
+    }
+
+    .wrapper__content:nth-child(2) {
+        height: calc(90vh/3);
+        height: auto;
+    }
+
+}
+
+@media screen and (min-width:400px) {
     section {
         padding: 0 2em;
     }
 
     .btn {
-        margin: 0;
+        margin: .5em;
+        padding: 1em;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (min-width:900px) {
+    section {
+        padding: 0 2em;
+    }
+
+    .btn {
+        margin: .5em;
+        padding: 1em;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (min-width:900px) {
+    section {
+        padding: 0 2em;
+    }
+
+    .btn {
+        margin: .5em;
+        padding: 1em;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (min-width:800px), (min-height: 1100px) {
+
+    h1 {
+        font-size: clamp(3.5rem, 5vw, 8rem);
+    }
+
+    .btn {
+        font-size: 1.3rem;
+    }
+
+    .wrapper__content:nth-child(2) {
+        align-items: center;
+        height: 250px;
+    }
+
+    .insert-info {
+        font-size: 2.4rem;
+    }
+
+    .numberFont {
+        font-size: 3.5rem;
     }
 }
