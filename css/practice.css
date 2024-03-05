@@ -99,7 +99,7 @@ h1 {
 @media screen and (orientation: landscape) {
 
     html {
-        font-size: 80%;
+        font-size: 65%;
     }
 
     section {
@@ -108,17 +108,24 @@ h1 {
 
     .wrapper {
         height: 100vh;
+        padding: 3em;
     }
 
     .wrapper__content {
         height: calc(100%/3);
         height: auto;
         transition: height 1s ease;
+        /* overflow: initial; */
     }
 
     .wrapper__content:nth-child(2) {
         height: calc(90vh/3);
         height: auto;
+    }
+
+    .btn {
+        padding: 0;
+        /* font-size: .5em; */
     }
 
 }
